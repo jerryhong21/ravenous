@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
-import BusinessList from './BusinessList';
-import { restaurantList } from './BusinessList';
-import SearchBar from './Searchbar';
+import BusinessList from '../BusinessList';
+import { restaurantList } from '../BusinessList';
+import SearchBar from '../Searchbar/Searchbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

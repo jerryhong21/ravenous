@@ -1,0 +1,37 @@
+.SearchBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("./background_search_desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25rem;
+}
+
+.sort-by-options {
+  display: inline-block;
+}
+
+#selected-location {
+  width: 45%; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Style for the search-terms input */
+#search-terms {
+  width: 45%; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Style for the search-button */
+#search-button {
+  display: block; /* Place the button below the inputs */
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
