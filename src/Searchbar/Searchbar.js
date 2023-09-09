@@ -1,6 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../Searchbar.css';
+import './Searchbar.css';
 
 export const sortByOptions = [
   { id: "best_match", choice: "Best Match" },
@@ -18,8 +17,8 @@ function SearchBar() {
     <div id="searchbar" className='searchbar'>
       {renderSortByOptions}
       <form method="GET" name="search" target="_blank" autoComplete="on">
-        <input type="text" className="form-control" id="selected-location" placeholder='Enter location'/>
-        <input type="text" className="form-control" id="search-terms" placeholder='What are you feeling like?'/>
+        <input type="text" className="search-input" id="selected-location" placeholder='Enter location'/>
+        <input type="text" className="search-input" id="search-terms" placeholder='What are you feeling like?'/>
         <button className="btn btn-primary" id="search-button">Find Food</button>
       </form>
     </div>

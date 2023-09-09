@@ -1,4 +1,6 @@
 import React from 'react';
+import './BusinessList.css';
+import Business from '../Business/Business';
 
 
 export const restaurantList = [
@@ -31,43 +33,22 @@ export const restaurantList = [
     address: "29 Abotsleight Rd",
     state: "VIC",
     zipcode: "2020",
-    category: "Asian Fusion",
+    category: "Mexican",
     rating: 5.0,
     reviewCount: 24
   },
 ]
 
-function Business({ restaurant }) {
-
-  return (
-    <div className="restaurant-container" style={{ backgroundImage: `url(${restaurant.image})` }}>
-      {/* <img className="restaurantImg" alt={`image of ${restaurant.name}`} src={restaurant.image}/> */}
-      <h1 id="name">
-        {restaurant.name}
-      </h1>
-      <div className="location">
-        <ul>
-          <li className="city">{restaurant.city}</li>
-          <li className="zipcode">{restaurant.zipcode}</li>
-          <li className="state">{restaurant.state}</li>
-          <li className="address">{restaurant.address}</li>
-        </ul>
-      </div>
-      <h2 id="category">{restaurant.category}</h2>
-      <div className="feedback">
-        <p id="rating">{restaurant.rating}</p>
-        <p id="reviewCount">{restaurant.reviewCount}</p>
-      </div>
-    </div>
-  );
-}
-
-
-export function BusinessList({restaurantList}) {
+function BusinessList({restaurantList}) {
   
-  return restaurantList.map((restaurant, index) => (
-    <Business key={index} restaurant={restaurant}/>
-  ));
+  return (
+    <div className="business-list">
+      {
+        restaurantList.map((restaurant, index) => (
+          <Business key={index} restaurant={restaurant}/>
+        ))
+      }
+    </div>);
 }
 
 export default BusinessList;
